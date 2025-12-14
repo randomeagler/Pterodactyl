@@ -22,3 +22,6 @@ RUN mariadb -u root -p
 COPY db.sh /app/db.sh
 RUN chmod +x /app/db.sh
 RUN /app/db.sh
+COPY env.sh /app/env.sh
+RUN chmod +x /app/env.sh
+RUN /app/env.sh
