@@ -10,7 +10,7 @@ RUN curl -fsSL https://packages.sury.org/php/apt.gpg | gpg --dearmor -o /etc/apt
 RUN curl -LsS https://r.mariadb.com/downloads/mariadb_repo_setup | bash
 
 # Install Dependencies
-RUN apt install -y php8.3 php8.3-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} mariadb-server nginx tar unzip git redis-server
+RUN apt install -y php8.3 mariadb-server nginx tar unzip git redis-server
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN mkdir -p /var/www/pterodactyl
 WORKDIR /var/www/pterodactyl
